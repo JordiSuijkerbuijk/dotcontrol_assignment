@@ -1,0 +1,99 @@
+@import '../../styles/mixins.scss';
+
+.container {
+  display: flex;
+  flex-direction: column;
+
+  .selectedMovieWrapper {
+    height: 800px;
+    padding: 0 215px;
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+
+    @include mq-down-1200($px: 1200px) {
+      padding: 0 100px;
+    }
+
+    @include mq-down-1200($px: 1000px) {
+      padding: 0 50px;
+    }
+
+    @include mq-down-1200($px: 650px) {
+      padding: 0 30px;
+    }
+
+    .title {
+      font-size: 90px;
+      font-family: GalanoGrotesqueExtraBold;
+      margin-top: 260px;
+      line-height: 80px;
+      margin-bottom: 25px;
+
+      @include mq-down-1200($px: 1000px) {
+        font-size: 60px;
+        line-height: 60px;
+      }
+    }
+
+    .plot {
+      max-width: 570px;
+      font-size: 18px;
+      font-family: NewzaldBold;
+    }
+
+    .button {
+      display: flex;
+      margin: 30px auto;
+    }
+  }
+
+  .movieWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    padding: 0 215px;
+    margin-top: -80px;
+
+    @include mq-down-1200($px: 1200px) {
+      padding: 0 100px;
+    }
+
+    @include mq-down-1200($px: 1000px) {
+      padding: 0 50px;
+      margin-top: -125px;
+    }
+
+    @include mq-down-1200($px: 650px) {
+      padding: 0 20px;
+      margin-top: -175px;
+    }
+
+    .movie {
+      color: #fff;
+      display: flex;
+      width: 370px;
+      height: 550px;
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: flex-end;
+      font-family: GalanoGrotesqueBold;
+      font-size: 24px;
+
+      @include mq-down-1200($px: 650px) {
+        width: 335px;
+        height: 500px;
+      }
+
+      .title {
+        margin: 35px 30px;
+      }
+    }
+  }
+
+  .buttonWrapper {
+    margin: 85px auto;
+  }
+}

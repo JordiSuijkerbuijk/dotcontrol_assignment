@@ -1,0 +1,24 @@
+@import '../styles/mixins.scss';
+
+.container {
+  position: relative;
+
+  .logo {
+    position: absolute;
+    left: 215px;
+    top: 45px;
+
+    @include mq-down-1200($px: 1200px) {
+      left: 100px;
+    }
+
+    @include mq-down-1200($px: 1000px) {
+      left: 50px;
+    }
+
+    @include mq-down-1200($px: 650px) {
+      left: 30px;
+      top: 30px;
+    }
+  }
+}
